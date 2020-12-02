@@ -13,7 +13,8 @@
     "build:site": "gulp copyDocs & cd ./site && npm run build",
     "start:umd": "tsdx watch --format umd --name Hetu",
     "build:umd": "tsdx build --format umd --name Hetu",
-    "server:dist": "http-server dist -c-1 -p 8080 --cors"
+    "server:dist": "http-server dist -c-1 -p 8080 --cors",
+    "server:docs": "http-server _site -c-1 -p 8081 --cors"
   },
   "devDependencies": {
     "@types/autoprefixer": "^9.6.1",

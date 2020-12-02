@@ -45,6 +45,7 @@ import {
   TableComponentProps,
   TableComponentState,
 } from './interfacce'
+import { StringifiableRecord } from 'query-string'
 
 export const tableRowModalFormAlias = '$$tableRowModalFormData'
 export const tableSelectionRowKeysAlias = '$$tableSelectionRowKeys'
@@ -67,7 +68,7 @@ export function transformParams(
   transform: JsonSchema.FormTransform | undefined,
   row: { [key: string]: any },
   data: JsonSchema.DynamicObject = {}
-): object {
+): StringifiableRecord {
   let result = { ...data, [uniqueKey]: row[uniqueKey] }
   // 如果为一个function
   if (isFunction(transform)) {

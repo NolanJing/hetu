@@ -9,7 +9,9 @@
 // development
 // testing
 // production
-let env: 'dev' | 'test' | 'prod' = 'test'
+let env: 'dev' | 'test' | 'prod' = 'dev';
+  console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
+
 switch (process.env.NODE_ENV) {
   case 'dev':
   case 'test':
@@ -17,7 +19,7 @@ switch (process.env.NODE_ENV) {
     env = process.env.NODE_ENV
     break
   default:
-    env = 'test'
+    env = 'dev'
 }
 
 export default env

@@ -58,6 +58,31 @@ class ProjectController extends BaseController {
     }
 
     insertProjectData.layout = JSON.stringify({ type: 'blank', menu_data: [] })
+    // add by jn
+    // insertProjectData.description = 'desc';
+    // insertProjectData.home = '/';
+    // insertProjectData.logo = '/';
+    // insertProjectData.submodules = '/';
+    // for (let item of ['home',
+    //   'logo',
+    //   'layout',
+    //   'description',
+    //   'proxy_host',
+    //   'department',
+    //   'submodules',
+    //   //  create_at: nowAt,
+    //   'create_ucid',
+    //   'create_user_name',]) {
+
+    //   if (_.isUndefined(insertProjectData[item])) {
+    //     insertProjectData[item] = 'default'
+    //   }
+    // }
+    // if (_.isUndefined(insertProjectData['proxy_success_code'])) {
+    //   insertProjectData['proxy_success_code'] = 0
+    // }
+
+    // jn end
     // 创建项目
     let projectId = await MProject.asyncCreate(insertProjectData, actor_ucid, actor_user_name)
     if (projectId === 0) {

@@ -17,9 +17,12 @@ function myRollupPlugin() {
       const filePath = `${targetDir}/manifest.json`
       const manifest = {
         files: {
-          'index.js': `/${pkg.version}/hetu.umd.development.js`,
-          'index.min.js': `/${pkg.version}/hetu.umd.production.min.js`,
-          'index.css': `/${pkg.version}/index.css`,
+          // 'index.js': `/${pkg.version}/hetu.umd.development.js`,
+          // 'index.min.js': `/${pkg.version}/hetu.umd.production.min.js`,
+          // 'index.css': `/${pkg.version}/index.css`,
+          'index.js': `${pkg.version}/hetu.umd.development.js`,
+          'index.min.js': `${pkg.version}/hetu.umd.production.min.js`,
+          'index.css': `${pkg.version}/index.css`,
         },
         entrypoints: ['index.js', 'index.css']
       }

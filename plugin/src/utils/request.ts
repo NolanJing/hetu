@@ -4,7 +4,7 @@ import _ from 'lodash'
 import { pathToRegexp } from 'path-to-regexp'
 import Qs from 'query-string'
 import Message from '~/utils/message'
-
+import { StringifiableRecord } from 'query-string'
 // 请求成功状态码
 const successCode = 0
 
@@ -16,7 +16,7 @@ export const axiosInstance = Axios.create({
     'X-Requested-With': 'XMLHttpRequest',
   },
   withCredentials: true,
-  paramsSerializer: function(params: object) {
+  paramsSerializer: function(params: StringifiableRecord) {
     return Qs.stringify(params, { arrayFormat: 'comma' })
   },
 })

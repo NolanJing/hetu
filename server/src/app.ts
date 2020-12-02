@@ -99,6 +99,7 @@ const startup = () => {
 
   let ipList = NetworkUtil.getLocalIpList()
   ipList = ['127.0.0.1']
+  console.log('appConfig: ', appConfig);
   server = app.listen(appConfig.port, function () {
     console.log(`${appConfig.name} listening on port ${appConfig.port}`)
     console.log(`↓↓↓↓↓点击任意链接打开调试界面↓↓↓↓↓`)

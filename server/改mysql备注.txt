@@ -1,0 +1,13 @@
+set password for root@localhost = password('123456');  
+
+
+CREATE USER 'root'@'localhost' IDENTIFIED with mysql_native_password  BY 'appleyuchi';
+
+GRANT ALLON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+
+grant all privileges on *.* to 'admin'@'localhost' identified by 'Pwd@123' with grant option;
+
+
+ALTER USER 'admin'@'localhost' IDENTIFIED BY 'Pwd@123' PASSWORD EXPIRE NEVER;
+ALTER USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Pwd@123'; #更新一下用户的密码 
+

@@ -3,7 +3,8 @@ import prodConfig from '~/src/config/_prod'
 import mysql_env from '~/src/config/mysql_env'
 import _ from 'lodash'
 
-const { host, port, user, password, database } = _.get(prodConfig, 'mysql')
+const { host, port, user, password, database } = _.get(prodConfig, 'server')
+// const { host, port, user, password, database } = _.get(prodConfig, 'mysql')
 
 // 开发环境配置
 const dev = {

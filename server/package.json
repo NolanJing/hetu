@@ -4,6 +4,7 @@
   "private": false,
   "scripts": {
     "dev": "NODE_ENV=dev ts-node-dev src/app.ts",
+    "start": "set NODE_ENV=dev && ts-node-dev src/app.ts",
     "build": "yarn copy-static-assets && tsc",
     "copy-static-assets": "node copy_static_assets.js",
     "task": "NODE_ENV=dev node dist/task.js",
