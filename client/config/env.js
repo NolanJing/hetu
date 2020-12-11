@@ -16,12 +16,13 @@ if (fs.existsSync(filePath)) {
 
 // process.env.CDN_URL = `//${systemConfig.client.cdn_host}`
 process.env.CDN_URL = `${systemConfig.client.cdn_host}`
+console.log('process.env.CDN_URL: ', process.env.CDN_URL)
 
 if (process.env.NODE_ENV === 'development') {
   process.env.PUBLIC_URL = '/';
 } else {
-  // process.env.PUBLIC_URL = process.env.CDN_URL + '/hetu-client/';
-  process.env.PUBLIC_URL = '/hetu-client/';
+  process.env.PUBLIC_URL = process.env.CDN_URL + '/hetu-client/';
+  // process.env.PUBLIC_URL = '/hetu-client/';
 }
 
 // Make sure that including paths.js after env.js will read .env variables.

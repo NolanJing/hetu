@@ -147,7 +147,9 @@ class PageHome extends React.Component<PageHomeProps, PageHomeState> {
     // 根据页面路径获取项目详情
     const projectDetail = await Api.Project.getAsyncProjectDetail(pathname)
 
-    const submodules = projectDetail.submodules || getDefaultSubmodule()
+    // const submodules = projectDetail.submodules || getDefaultSubmodule()
+    const submodules = projectDetail.submodules || 'hetu-plugin'
+    console.log('submodules: ', submodules);
 
     await initSubmodules(submodules)
 
@@ -319,6 +321,7 @@ class PageHome extends React.Component<PageHomeProps, PageHomeState> {
     }
 
     const isProd = window.ENV === 'prod'
+    console.log('isProd: ',  window.ENV);
 
     return (
       <ConfigProvider locale={zhCN} prefixCls="ht">

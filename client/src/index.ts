@@ -20,7 +20,7 @@ import 'antd/lib/notification/style/index.css'
 import './index.less'
 
 import _history from './utils/history'
-
+console.log('process.env: ', process.env);
 // JsonEditor 组件配置
 window.$$PUBLIC_URL =
   process.env.NODE_ENV === 'development'
